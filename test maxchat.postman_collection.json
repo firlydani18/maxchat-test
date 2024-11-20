@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "13f9275c-ce1b-4b44-9869-9fd9f26546ff",
+		"name": "test maxchat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36757913"
+	},
+	"item": [
+		{
+			"name": "get items",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/items",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 06:35:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "685"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"code\": \"rv1\",\n        \"name\": \"Rover #1\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"car\",\n        \"tech\": [\n            \"AI\",\n            \"car\"\n        ],\n        \"status\": \"progress\"\n    },\n    {\n        \"code\": \"tfx\",\n        \"name\": \"Transformer X\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"transformation\",\n        \"tech\": [\n            \"car\",\n            \"robot\"\n        ],\n        \"status\": \"active\"\n    },\n    {\n        \"code\": \"px1\",\n        \"name\": \"Pacifista 1\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"humanoid\",\n        \"tech\": [\n            \"AI\",\n            \"robot\"\n        ],\n        \"status\": \"active\"\n    },\n    {\n        \"code\": \"ax8\",\n        \"name\": \"Android #8\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"humanoid\",\n        \"tech\": [\n            \"cyborg\"\n        ],\n        \"status\": \"active\"\n    },\n    {\n        \"code\": \"ax7\",\n        \"name\": \"Android #7\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"humanoid\",\n        \"tech\": [\n            \"cybord\"\n        ],\n        \"status\": \"inactive\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get item by code",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/item?code=rv1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"item"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "rv1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 06:36:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "130"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"rv1\",\n    \"name\": \"Rover #1\",\n    \"description\": \"Lorem ipsum dolor sit amet\",\n    \"model\": \"car\",\n    \"tech\": [\n        \"AI\",\n        \"car\"\n    ],\n    \"status\": \"progress\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get item by filter",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/filter?model=car",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "car"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 06:36:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"code\": \"rv1\",\n        \"name\": \"Rover #1\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"car\",\n        \"tech\": [\n            \"AI\",\n            \"car\"\n        ],\n        \"status\": \"progress\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get item by multi filter",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/filter?tech=AI&tech=robot",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "tech",
+									"value": "AI"
+								},
+								{
+									"key": "tech",
+									"value": "robot"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 06:38:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "417"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"code\": \"rv1\",\n        \"name\": \"Rover #1\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"car\",\n        \"tech\": [\n            \"AI\",\n            \"car\"\n        ],\n        \"status\": \"progress\"\n    },\n    {\n        \"code\": \"tfx\",\n        \"name\": \"Transformer X\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"transformation\",\n        \"tech\": [\n            \"car\",\n            \"robot\"\n        ],\n        \"status\": \"active\"\n    },\n    {\n        \"code\": \"px1\",\n        \"name\": \"Pacifista 1\",\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"model\": \"humanoid\",\n        \"tech\": [\n            \"AI\",\n            \"robot\"\n        ],\n        \"status\": \"active\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

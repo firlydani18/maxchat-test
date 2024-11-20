@@ -1,0 +1,5 @@
+rv1,Rover #1,Lorem ipsum dolor sit amet,car,AI;car,progress
+tfx,Transformer X,Lorem ipsum dolor sit amet,transformation,car;robot,active
+px1,Pacifista 1,Lorem ipsum dolor sit amet,humanoid,AI;robot,active
+ax8,Android #8,Lorem ipsum dolor sit amet,humanoid,cyborg,active
+ax7,Android #7,Lorem ipsum dolor sit amet,humanoid,cybord,inactive
